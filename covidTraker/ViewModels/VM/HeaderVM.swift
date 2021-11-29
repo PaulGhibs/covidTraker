@@ -19,11 +19,11 @@ class HeaderVM: CollectionCellViewModel {
     var nibName: String? = "HeaderReusableView"
     lazy var reuseIdentifier: String = String(describing: self)
     
-    var covidCollection : CovidCollections
+    var world : String
     
-    init(covidCollection: CovidCollections) {
+    init(world: String) {
      
-        self.covidCollection = covidCollection
+        self.world = world
     }
     
 }

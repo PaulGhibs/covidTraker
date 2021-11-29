@@ -12,11 +12,12 @@ import Foundation
 
 class WorldCellEntry : RoutingEntry {
 
-
+    
+    
     var viewController: Controller? {
 
 
-        let viewModel = WorldViewModel(apiService: MediaGroupService())
+        let viewModel = WorldViewModel(apiService: DataFlowService())
 
         return BaseCollectionViewController(viewModel: viewModel, compositionalLayout: WorldCompositional())
     }

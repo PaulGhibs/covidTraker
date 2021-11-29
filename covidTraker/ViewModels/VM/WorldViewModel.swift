@@ -10,16 +10,16 @@ import Foundation
 
 class WorldViewModel: ViewModel {
    
-    var titleTabBar = NSLocalizedString("Accueil", comment: "")
+    var titleTabBar = NSLocalizedString("Covid Tracker", comment: "")
 
-    var shouldDisplayBackButton = false
+    var shouldDisplayBackButton = true
     
     var sections: [Section] = []
     
     var apiService: APIService?
     
     // recipe collection empty
-    var covidTab : [CovidCollections] = []
+    var covidTab : CovidCollection?
 
     init(apiService: APIService) {
         self.apiService = apiService
@@ -41,12 +41,12 @@ class WorldViewModel: ViewModel {
             var tempSections: [Section] = []
             if success, let resource = resource {
                 // parse resource as recipe collection
-                self.covidTab.append(resource as! CovidCollections)
-                for currentsect in self.covidTab {
-                    let currentCollectionSection = WorldSection(collection : currentsect)
-                    tempSections.append(currentCollectionSection)
-
-                }
+                
+                self.covidTab = resource as? CovidCollection
+                print(self.covidTab)
+                let currentCollectionSection = WorldSection(collection : self.covidTab!)
+                tempSections.append(currentCollectionSection)
+               
                 // append temps sections with recipeviewsection collection parsed
                 // define tempssections as sections
                 self.sections = tempSections

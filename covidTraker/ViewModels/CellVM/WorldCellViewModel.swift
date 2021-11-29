@@ -7,26 +7,28 @@
 
 import Foundation
 
-class WorldCellViewModel: CollectionCellViewModel {
+class WorldCellViewModel: CellViewModel {
  
     var routingEntry: RoutingEntry?
     
     var size: (width: Float, height: Float) {
-        return (350, 153)
+        return (50, 153)
     }
     
     var indexPath: IndexPath?
     var nibName: String? = "WorldCell"
     lazy var reuseIdentifier: String = String(describing: self)
     
+    var covidCollection : CovidCollection?
     var firstHeader: String?
-    var secondsubtitle: Int?
+    var secondsubtitle: String?
     
     
-    init(firstHeader: String, secondsubtitle: Int, routingEntry : RoutingEntry) {
+    
+    init(covidCollection : CovidCollection, firstHeader: String, secondsubtitle: String, routingEntry : RoutingEntry) {
         self.firstHeader = firstHeader
         self.secondsubtitle = secondsubtitle
-      
+        self.covidCollection = covidCollection
         self.routingEntry = routingEntry
     }
     

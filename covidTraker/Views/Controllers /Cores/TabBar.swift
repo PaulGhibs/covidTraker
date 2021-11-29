@@ -33,7 +33,7 @@ class TabBarViewController: UITabBarController {
     func setupVCs() {
             viewControllers = [
                 // two controllers the search one and the favorite
-                createNavController(for: BaseCollectionViewController(viewModel: WorldViewModel(apiService: MediaGroupService()), compositionalLayout: WorldCompositional()), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "homekit")!),
+                createNavController(for: BaseCollectionViewController(viewModel: WorldViewModel(apiService: DataFlowService()), compositionalLayout: WorldCompositional()), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "homekit")!),
                 createNavController(for: SearchController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "map")!),
                 
             ]

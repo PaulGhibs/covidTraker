@@ -16,20 +16,24 @@ class WorldSection: CollectionSection {
     var title: String?
     var cellsVM: [CellViewModel]
     
-    init(collection : CovidCollections) {
+    init(collection : CovidCollection) {
         self.position = 0
         self.title = ""
         
        
       
-        self.headerVM = HeaderVM(covidCollection: collection)
+        self.headerVM = HeaderVM(world: " 🌍 World Situation")
 
         self.cellsVM = [CellViewModel]()
+        
+      
+        
+        let worldcellVM = WorldCellViewModel(covidCollection: collection, firstHeader: "Total covid cases : \(collection.totalCasesText)", secondsubtitle: "Total recovered : \(collection.totalRecoveredText)",
+                                                routingEntry: WorldCellEntry())
+        self.cellsVM.append(worldcellVM)
+        
    
-        let cellVM = WorldCellViewModel(firstHeader: collection.country.country,
-                                            secondsubtitle: 1,
-                                            routingEntry: WorldCellEntry())
-            self.cellsVM.append(cellVM)
+      
         
    
     }

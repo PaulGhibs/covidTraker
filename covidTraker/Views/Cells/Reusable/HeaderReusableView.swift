@@ -11,10 +11,9 @@ class HeaderReusableView: UICollectionReusableView {
 
     @IBOutlet weak var header: UILabel!
     
-    @IBOutlet weak var details: UIButton!
    
     var controller : UIViewController?
-    var collection : [Country]?
+    var collection : CovidCollection?
 
     override func configure(cellViewModel: CellViewModel, from controller: UIViewController) {
             guard let headerVM = cellViewModel as? HeaderVM else {
@@ -22,14 +21,9 @@ class HeaderReusableView: UICollectionReusableView {
             }
             self.controller = controller
         
-            guard let covidInfo = collection else {
-                return
-            }
             
-            for infos in covidInfo {
-                self.header.text = flag(country: infos.country)
-            }
-            self.details.setTitle("details", for: .normal)
+            self.header.text = headerVM.world
+
             
         }
         

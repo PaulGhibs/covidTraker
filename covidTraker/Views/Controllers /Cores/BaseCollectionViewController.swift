@@ -33,7 +33,7 @@ class BaseCollectionViewController: UICollectionViewController {
        
         
         
-        guard (self.viewModel as? WorldViewModel) != nil else {
+        guard (self.viewModel as? CellViewModel) != nil else {
           
             navigationItem.title = viewModel?.titleTabBar
             return
