@@ -44,9 +44,7 @@ class BaseCollectionViewController: UICollectionViewController {
     
     
     override func viewDidLoad() {
-        
-        
-        
+
         // Set layout if we have one
         if let layout = self.compositionalLayout {
             collectionView.collectionViewLayout = layout.create()
@@ -56,6 +54,7 @@ class BaseCollectionViewController: UICollectionViewController {
         self.viewModel?.loadData { error in
             self.registerCells()
             self.collectionView.reloadData()
+            
         }
     }
     

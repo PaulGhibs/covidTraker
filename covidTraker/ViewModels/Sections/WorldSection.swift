@@ -22,13 +22,13 @@ class WorldSection: CollectionSection {
         
        
       
-        self.headerVM = HeaderVM(world: " 🌍 World Situation")
+        self.headerVM = HeaderVM(world: "  World Situation 🌍 ")
 
         self.cellsVM = [CellViewModel]()
         
       
         
-        let worldcellVM = WorldCellViewModel(covidCollection: collection, firstHeader: "Total covid cases : \(collection.totalCasesText)", secondsubtitle: "Total recovered : \(collection.totalRecoveredText)",
+        let worldcellVM = WorldCellViewModel(covidCollection: collection,
                                                 routingEntry: WorldCellEntry())
         self.cellsVM.append(worldcellVM)
         

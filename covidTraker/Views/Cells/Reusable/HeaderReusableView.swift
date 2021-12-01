@@ -14,6 +14,8 @@ class HeaderReusableView: UICollectionReusableView {
    
     var controller : UIViewController?
     var collection : CovidCollection?
+    
+  
 
     override func configure(cellViewModel: CellViewModel, from controller: UIViewController) {
             guard let headerVM = cellViewModel as? HeaderVM else {
@@ -23,7 +25,7 @@ class HeaderReusableView: UICollectionReusableView {
         
             
             self.header.text = headerVM.world
-
+            header.textDropShadow()
             
         }
         

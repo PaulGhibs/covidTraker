@@ -13,26 +13,36 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="139"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <searchBar contentMode="redraw" placeholder="Search by countries" translatesAutoresizingMaskIntoConstraints="NO" id="QoQ-9p-vY1">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sN-Rr-VWa">
-                    <rect key="frame" x="0.0" y="88.5" width="320" height="28"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="hM6-bF-J0Z">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="861"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="861" id="caF-xd-Aps"/>
+                    </constraints>
+                </imageView>
+                <label userInteractionEnabled="NO" contentMode="center" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sN-Rr-VWa">
+                    <rect key="frame" x="28" y="86" width="264" height="28"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
+                    <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <size key="shadowOffset" width="1" height="-1"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <constraints>
-                <constraint firstItem="QoQ-9p-vY1" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Hbf-Mf-lhR"/>
-                <constraint firstItem="3sN-Rr-VWa" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="NVU-xn-6cL"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="3sN-Rr-VWa" secondAttribute="trailing" id="QoI-It-4dg"/>
-                <constraint firstItem="3sN-Rr-VWa" firstAttribute="top" secondItem="QoQ-9p-vY1" secondAttribute="bottom" constant="37.5" id="ReA-UB-Zfc"/>
-                <constraint firstItem="3sN-Rr-VWa" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="WF8-Al-Oz4"/>
-                <constraint firstItem="QoQ-9p-vY1" firstAttribute="leading" secondItem="3sN-Rr-VWa" secondAttribute="leading" id="YBy-ZL-mNP"/>
-                <constraint firstItem="QoQ-9p-vY1" firstAttribute="trailing" secondItem="3sN-Rr-VWa" secondAttribute="trailing" id="eFt-4E-CBt"/>
+                <constraint firstItem="3sN-Rr-VWa" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" constant="42" id="308-Pb-9xX"/>
+                <constraint firstItem="3sN-Rr-VWa" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" constant="-28" id="FbT-V3-FXs"/>
+                <constraint firstItem="hM6-bF-J0Z" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="G22-7C-JgQ"/>
+                <constraint firstItem="hM6-bF-J0Z" firstAttribute="centerX" secondItem="3sN-Rr-VWa" secondAttribute="centerX" id="QI2-1y-TNh"/>
+                <constraint firstItem="hM6-bF-J0Z" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="WeW-Le-oxi"/>
+                <constraint firstItem="3sN-Rr-VWa" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="28" id="rAY-aa-2Ic"/>
             </constraints>
             <connections>
                 <outlet property="header" destination="3sN-Rr-VWa" id="uFp-qT-TWl"/>
@@ -40,4 +50,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="123.54910714285714"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <image name="background" width="675" height="1200"/>
+    </resources>
 </document>

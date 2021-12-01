@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-IL-0wX" customClass="MapCell" customModule="covidTraker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="502" height="433"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="502" height="433"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="5wV-rR-TSZ">
+                        <rect key="frame" x="0.0" y="51" width="502" height="382"/>
+                    </imageView>
+                    <searchBar contentMode="redraw" placeholder="Search by countries" translatesAutoresizingMaskIntoConstraints="NO" id="grB-iW-fnh">
+                        <rect key="frame" x="0.0" y="0.0" width="502" height="51"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </searchBar>
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0da-rI-d4T">
+                        <rect key="frame" x="10" y="68" width="482" height="432"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="432" id="gum-vd-khZ"/>
+                        </constraints>
+                    </mapView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5wV-rR-TSZ" secondAttribute="bottom" id="5LY-aw-cYP"/>
+                <constraint firstItem="grB-iW-fnh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7cC-cI-sHb"/>
+                <constraint firstAttribute="trailing" secondItem="5wV-rR-TSZ" secondAttribute="trailing" id="Er8-0X-PgR"/>
+                <constraint firstItem="5wV-rR-TSZ" firstAttribute="top" secondItem="grB-iW-fnh" secondAttribute="bottom" id="Gwy-fT-J9F"/>
+                <constraint firstItem="0da-rI-d4T" firstAttribute="centerX" secondItem="grB-iW-fnh" secondAttribute="centerX" id="INg-5F-IMW"/>
+                <constraint firstItem="0da-rI-d4T" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="68" id="bdo-Xk-R2z"/>
+                <constraint firstItem="grB-iW-fnh" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="e6F-Qa-oSL"/>
+                <constraint firstItem="5wV-rR-TSZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kd5-K3-OfR"/>
+                <constraint firstItem="grB-iW-fnh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mHv-Zm-Ga3"/>
+                <constraint firstItem="0da-rI-d4T" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="yr7-Gf-TjR"/>
+            </constraints>
+            <size key="customSize" width="502" height="433"/>
+            <connections>
+                <outlet property="searchCountryBar" destination="grB-iW-fnh" id="0LF-V3-bcq"/>
+                <outlet property="searchmap" destination="0da-rI-d4T" id="iYs-9u-9ma"/>
+            </connections>
+            <point key="canvasLocation" x="439.13043478260875" y="329.79910714285711"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="background" width="675" height="1200"/>
+    </resources>
+</document>

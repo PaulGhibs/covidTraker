@@ -20,14 +20,12 @@ class WorldCellViewModel: CellViewModel {
     lazy var reuseIdentifier: String = String(describing: self)
     
     var covidCollection : CovidCollection?
-    var firstHeader: String?
-    var secondsubtitle: String?
+   
     
     
     
-    init(covidCollection : CovidCollection, firstHeader: String, secondsubtitle: String, routingEntry : RoutingEntry) {
-        self.firstHeader = firstHeader
-        self.secondsubtitle = secondsubtitle
+    init(covidCollection : CovidCollection, routingEntry : RoutingEntry) {
+  
         self.covidCollection = covidCollection
         self.routingEntry = routingEntry
     }

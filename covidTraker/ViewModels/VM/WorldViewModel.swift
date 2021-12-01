@@ -43,7 +43,6 @@ class WorldViewModel: ViewModel {
                 // parse resource as recipe collection
                 
                 self.covidTab = resource as? CovidCollection
-                print(self.covidTab)
                 let currentCollectionSection = WorldSection(collection : self.covidTab!)
                 tempSections.append(currentCollectionSection)
                
