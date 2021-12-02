@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeaderReusableView: UICollectionReusableView {
+class WorldReusableView: UICollectionReusableView {
 
     @IBOutlet weak var header: UILabel!
     
@@ -18,7 +18,7 @@ class HeaderReusableView: UICollectionReusableView {
   
 
     override func configure(cellViewModel: CellViewModel, from controller: UIViewController) {
-            guard let headerVM = cellViewModel as? HeaderVM else {
+            guard let headerVM = cellViewModel as? WorldHeaderVM else {
                 return
             }
             self.controller = controller
@@ -40,17 +40,5 @@ class HeaderReusableView: UICollectionReusableView {
         }
         return String(s)
     }
-    @IBAction func detailsButton(_ sender: Any) {
-        guard self.collection != nil else {
-            return
-        }
-        
-        let newRouting = Routing()
-            
-        _ = newRouting
-            .route(routingEntry: WorldCellEntry(),
-                   fromController: self.controller!,
-                   animated: true)
-
-    }
+   
 }

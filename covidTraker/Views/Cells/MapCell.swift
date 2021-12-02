@@ -17,6 +17,8 @@ class MapCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         searchmap.layer.cornerRadius = 20
+        searchmap.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        
         
     }
     override func configure(cellViewModel: CellViewModel, from controller: UIViewController) {

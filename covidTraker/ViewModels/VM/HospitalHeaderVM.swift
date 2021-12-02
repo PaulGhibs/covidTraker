@@ -1,13 +1,13 @@
 //
-//  HeaderVM.swift
-//  covidTracker
+//  HospitalHeaderVM.swift
+//  covidTraker
 //
-//  Created by Paul Ghibeaux on 20/11/2021.
+//  Created by Paul Ghb on 02/12/2021.
 //
 
 import Foundation
 
-class HeaderVM: CollectionCellViewModel {
+class HospitalHeaderVM: CollectionCellViewModel {
     
     var routingEntry: RoutingEntry?
     
@@ -16,7 +16,7 @@ class HeaderVM: CollectionCellViewModel {
     }
     
     var indexPath: IndexPath?
-    var nibName: String? = "HeaderReusableView"
+    var nibName: String? = "HospitalHeaderView"
     lazy var reuseIdentifier: String = String(describing: self)
     
     var world : String

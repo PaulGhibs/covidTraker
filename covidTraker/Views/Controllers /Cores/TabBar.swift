@@ -13,7 +13,7 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // tab bar appearance
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         self.tabBar.tintColor = UIColor.darkGray
         self.tabBar.backgroundColor = UIColor.systemBackground
         tabBar.unselectedItemTintColor = UIColor.lightGray
@@ -33,7 +33,8 @@ class TabBarViewController: UITabBarController {
             viewControllers = [
                 // two controllers the search one and the favorite
                 createNavController(for: BaseCollectionViewController(viewModel: WorldViewModel(apiService: DataFlowService()), compositionalLayout: WorldCompositional()), title: NSLocalizedString("Covid Tracker", comment: ""), image: UIImage(systemName: "homekit")!),
-                createNavController(for: BaseCollectionViewController(viewModel: MapViewModel(apiService: GoogleService() ), compositionalLayout: MapCompositional()), title: NSLocalizedString("Map", comment: ""), image: UIImage(systemName: "map")!),
+                createNavController(for: BaseCollectionViewController(viewModel: MapViewModel(apiService: DataFlowService()), compositionalLayout: MapCompositional()), title: NSLocalizedString("Map", comment: ""), image: UIImage(systemName: "map")!),
+                createNavController(for: BaseCollectionViewController(viewModel: HospitalViewModel(apiService: GoogleService()), compositionalLayout: HospitalCompositional()), title: NSLocalizedString("Hospitals", comment: ""), image: UIImage(systemName: "stethoscope.circle")!),
                 
             ]
         }
@@ -46,7 +47,7 @@ class TabBarViewController: UITabBarController {
            navController.tabBarItem.title = title
            navController.tabBarItem.image = image
             navController.navigationBar.prefersLargeTitles = true
-        navController.navigationItem.largeTitleDisplayMode = .always
+            navController.navigationItem.largeTitleDisplayMode = .always
         
 
             navController.navigationBar.largeTitleTextAttributes =

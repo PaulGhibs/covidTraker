@@ -10,7 +10,7 @@ import Foundation
 
 class WorldViewModel: ViewModel {
    
-    var titleTabBar = NSLocalizedString("Covid Tracker", comment: "")
+    var titleTabBar = NSLocalizedString("Home Stats", comment: "")
 
     var shouldDisplayBackButton = true
     

@@ -19,7 +19,7 @@ class GoogleService : APIService {
         let url: URL!
         do {
             
-           url = try DataFlowService.createURL()
+           url = try GoogleService.createURL()
             
         } catch {
             return callback(false, nil)

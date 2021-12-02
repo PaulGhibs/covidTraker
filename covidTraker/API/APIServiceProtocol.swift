@@ -17,3 +17,4 @@ protocol APIService {
         static func parse <T: Decodable>(_ data: Data) -> T
 
 }
+
