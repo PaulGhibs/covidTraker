@@ -14,12 +14,12 @@ class DataFlowService : APIService {
     // MARK: - Properties
     static let covidTab : [CovidCollection] = []
   
-    func requestInfos(with country: String, callback: @escaping Callback) {
+    func requestInfos(with country: String, callback: @escaping DataFlowService.Callback) {
         // Try api call or return callback false nil if url is good
         let url: URL!
         do {
             
-           url = try DataFlowService.createURL()
+            url = try DataFlowService.createURL(with: country)
             
         } catch {
             return callback(false, nil)
@@ -44,9 +44,12 @@ class DataFlowService : APIService {
    
 
    
-    static func createURL() throws -> URL? {
-        let completeURL = "https://covid-19.dataflowkit.com/v1/world"
+    static func createURL(with country: String) throws -> URL? {
+        let completeURL = "https://covid-19.dataflowkit.com/v1/" + country
+        print(completeURL)
+
         return URL(string: completeURL)
+
     }
     
     static func parse<CovidCollection: Decodable>(_ data: Data) -> CovidCollection {

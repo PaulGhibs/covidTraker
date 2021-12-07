@@ -14,9 +14,9 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="hM6-bF-J0Z">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="861"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="880"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="861" id="caF-xd-Aps"/>
+                        <constraint firstAttribute="height" constant="880" id="caF-xd-Aps"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sN-Rr-VWa">

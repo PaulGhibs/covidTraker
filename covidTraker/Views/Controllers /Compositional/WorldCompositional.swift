@@ -47,13 +47,20 @@ struct MapCompositional : CompositionalLayoutProtocol {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                               heightDimension: .fractionalHeight(1))
+                                               heightDimension: .fractionalHeight(0.8))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
-    
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                heightDimension: .fractionalHeight(0.15))
+        
+        let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
+                                                                        elementKind: UICollectionView.elementKindSectionHeader, alignment: .topLeading)
+        
         
         let section = NSCollectionLayoutSection(group: group)
-        
+        section.boundarySupplementaryItems = [headerElement]
+
+
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout

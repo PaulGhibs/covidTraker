@@ -16,10 +16,27 @@ class WorldCellEntry : RoutingEntry {
     
     var viewController: Controller? {
 
-
         let viewModel = WorldViewModel(apiService: DataFlowService())
 
         return BaseCollectionViewController(viewModel: viewModel, compositionalLayout: WorldCompositional())
+    }
+
+    var completionBlock: (() -> Void)?
+    var navigationStyle: NavigationStyle {
+        return .push
+    }
+
+}
+
+
+
+class SearchRountingEntry : RoutingEntry {
+
+    
+    var viewController: Controller? {
+
+        let viewModel = ResultViewModel(apiService: DataFlowService())
+        return BasicTableViewController(viewModel: viewModel)
     }
 
     var completionBlock: (() -> Void)?

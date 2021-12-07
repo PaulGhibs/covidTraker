@@ -26,3 +26,14 @@ extension UICollectionReusableView: CellConfigurable {
     }
 
 }
+extension UITableViewCell: CellConfigurable {
+    // each tableviewcell conforms to cellconfigurable
+    func cellPressed(cellViewModel: CellViewModel, from controller: UIViewController) {
+        // Do something if needed or override on subclasses
+    }
+    
+    func configure(cellViewModel: CellViewModel, from controller: UIViewController) {
+       
+    }
+    
+}

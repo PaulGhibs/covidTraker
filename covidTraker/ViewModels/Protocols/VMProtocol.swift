@@ -39,4 +39,3 @@ extension ViewModel {
         self.sections[indexPath.section].cellsVM.remove(at: indexPath.row)
     }
 }
-

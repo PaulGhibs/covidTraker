@@ -8,6 +8,8 @@
 import Foundation
 
 
+
+
 struct HospitalCollections: Codable {
     var results: [SearchResult]
     var status: String

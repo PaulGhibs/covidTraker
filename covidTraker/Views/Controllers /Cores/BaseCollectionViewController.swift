@@ -14,8 +14,8 @@ class BaseCollectionViewController: UICollectionViewController {
     
     var viewModel: ViewModel?
     var compositionalLayout: CompositionalLayoutProtocol?
-    
-    
+
+
     
     init(viewModel: ViewModel,
          compositionalLayout: CompositionalLayoutProtocol) {
@@ -31,8 +31,6 @@ class BaseCollectionViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
        
-        
-        
         guard (self.viewModel as? CellViewModel) != nil else {
           
             navigationItem.title = viewModel?.titleTabBar
@@ -44,7 +42,7 @@ class BaseCollectionViewController: UICollectionViewController {
     
     
     override func viewDidLoad() {
-
+       
         // Set layout if we have one
         if let layout = self.compositionalLayout {
             collectionView.collectionViewLayout = layout.create()
@@ -57,6 +55,9 @@ class BaseCollectionViewController: UICollectionViewController {
             
         }
     }
+   
+    
+        
     
     // MARK: - Register
     public func registerCells() {

@@ -1,33 +1,31 @@
 //
-//  WorldCellViewModel.swift
-//  covidTracker
+//  ResultCellViewModel.swift
+//  covidTraker
 //
-//  Created by Paul Ghibeaux on 19/11/2021.
+//  Created by Paul Ghb on 06/12/2021.
 //
 
 import Foundation
 
-class WorldCellViewModel: CellViewModel {
- 
+
+class ResultCellViewModel: TableCellViewModel {
+   
+    
     var routingEntry: RoutingEntry?
     
-    var size: (width: Float, height: Float) {
-        return (50, 153)
+    
+    var height: Float {
+        return 550
     }
     
     var indexPath: IndexPath?
-    var nibName: String? = "WorldCell"
+    var nibName: String? = "labelCell"
     lazy var reuseIdentifier: String = String(describing: self)
     
     var covidCollection : CovidCollection?
-   
-    
-    
-    
+
     init(covidCollection : CovidCollection) {
-  
         self.covidCollection = covidCollection
         
     }
-    
 }

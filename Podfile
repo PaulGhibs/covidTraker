@@ -7,8 +7,7 @@ target 'covidTraker' do
 
   # Pods for covidTraker
   pod 'Alamofire', '~> 5.4'
-  pod 'Charts'
-  pod 'SwiftyJSON', '~> 4.0'
 
+  pod 'Charts'
  
 end

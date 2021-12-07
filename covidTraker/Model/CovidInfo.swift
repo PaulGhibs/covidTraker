@@ -27,3 +27,7 @@ struct CovidCollection: Codable {
         case totalRecoveredText = "Total Recovered_text"
     }
 }
+
+
+
+

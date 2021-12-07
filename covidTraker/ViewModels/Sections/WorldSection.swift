@@ -28,8 +28,7 @@ class WorldSection: CollectionSection {
         
       
         
-        let worldcellVM = WorldCellViewModel(covidCollection: collection,
-                                                routingEntry: WorldCellEntry())
+        let worldcellVM = WorldCellViewModel(covidCollection: collection)
         self.cellsVM.append(worldcellVM)
         
    

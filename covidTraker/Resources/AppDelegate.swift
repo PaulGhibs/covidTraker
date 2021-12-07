@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font : (UIFont(name: "Avenir Next", size: 25))!, NSAttributedString.Key.foregroundColor: UIColor.secondaryLabel]
 //        removeCoreData()
-
         return true
     }
 

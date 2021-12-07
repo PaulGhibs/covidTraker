@@ -33,8 +33,8 @@ class TabBarViewController: UITabBarController {
             viewControllers = [
                 // two controllers the search one and the favorite
                 createNavController(for: BaseCollectionViewController(viewModel: WorldViewModel(apiService: DataFlowService()), compositionalLayout: WorldCompositional()), title: NSLocalizedString("Covid Tracker", comment: ""), image: UIImage(systemName: "homekit")!),
-                createNavController(for: BaseCollectionViewController(viewModel: MapViewModel(apiService: DataFlowService()), compositionalLayout: MapCompositional()), title: NSLocalizedString("Map", comment: ""), image: UIImage(systemName: "map")!),
-                createNavController(for: BaseCollectionViewController(viewModel: HospitalViewModel(apiService: GoogleService()), compositionalLayout: HospitalCompositional()), title: NSLocalizedString("Hospitals", comment: ""), image: UIImage(systemName: "stethoscope.circle")!),
+                createNavController(for: BasicTableViewController(viewModel: CountryViewModel()), title: NSLocalizedString("Search", comment: ""), image: UIImage(systemName: "magnifyingglass")!),
+                createNavController(for: BaseCollectionViewController(viewModel: HospitalViewModel(apiService: GoogleMapService()), compositionalLayout: HospitalCompositional()), title: NSLocalizedString("Hospitals", comment: ""), image: UIImage(systemName: "stethoscope.circle")!),
                 
             ]
         }

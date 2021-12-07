@@ -7,19 +7,22 @@
 
 import Foundation
 import Alamofire
+import CoreLocation
 // MARK: - API Service
 
 
-class GoogleService : APIService {
+class GoogleMapService: APIService {
+    // MARK: - Properties
+
     // MARK: - Properties
     static let covidTab : [CovidCollection] = []
   
-    func requestInfos(with country: String, callback: @escaping Callback) {
+    func requestInfos(with country: String, callback: @escaping DataFlowService.Callback) {
         // Try api call or return callback false nil if url is good
         let url: URL!
         do {
             
-           url = try GoogleService.createURL()
+            url = try DataFlowService.createURL(with: country)
             
         } catch {
             return callback(false, nil)
@@ -44,14 +47,15 @@ class GoogleService : APIService {
    
 
    
-    static func createURL() throws -> URL? {
-        let completeURL = ""
+    static func createURL(with country: String) throws -> URL? {
+        let completeURL = "https://covid-19.dataflowkit.com/v1/" + country
+        print(completeURL)
         return URL(string: completeURL)
     }
     
-    static func parse<HospitalCollections: Decodable>(_ data: Data) -> HospitalCollections {
+    static func parse<CovidCollection: Decodable>(_ data: Data) -> CovidCollection {
         do {
-            let covid = try JSONDecoder().decode(HospitalCollections.self, from: data)
+            let covid = try JSONDecoder().decode(CovidCollection.self, from: data)
             return covid
             
         } catch DecodingError.dataCorrupted(let context) {
@@ -68,8 +72,10 @@ class GoogleService : APIService {
         }
        
         // result as recipecollection above
-        return self.covidTab as! HospitalCollections
+        return self.covidTab as! CovidCollection
     }
+    
+  
     
     
 }

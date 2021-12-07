@@ -12,7 +12,7 @@ class HospitalViewModel: ViewModel {
    
     var titleTabBar = NSLocalizedString("Hospital List", comment: "")
 
-    var shouldDisplayBackButton = true
+    var shouldDisplayBackButton = false
     
     var sections: [Section] = []
     
