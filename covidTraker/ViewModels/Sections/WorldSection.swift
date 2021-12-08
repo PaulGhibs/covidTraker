@@ -22,7 +22,6 @@ class WorldSection: CollectionSection {
         
        
       
-        self.headerVM = WorldHeaderVM(world: "  World Situation 🌍 ")
 
         self.cellsVM = [CellViewModel]()
         

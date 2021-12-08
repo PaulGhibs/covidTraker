@@ -8,7 +8,7 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
- 
+
     // MARK: - View did load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +20,13 @@ class TabBarViewController: UITabBarController {
         let appearance = UITabBarItem.appearance()
         let attributes = [NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 10)]
         appearance.setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
-
         setupVCs()
         
       
     }
     
    
+ 
     
     // MARK: - Methods
     func setupVCs() {

@@ -18,8 +18,10 @@ class HospitalViewModel: ViewModel {
     
     var apiService: APIService?
     
+    
+    
     // recipe collection empty
-    var covidTab : CovidCollection?
+    var covidTab = HospitalCollections(results: [], status: "")
 
     init(apiService: APIService) {
         self.apiService = apiService
@@ -36,11 +38,25 @@ class HospitalViewModel: ViewModel {
     func loadData(callback: @escaping (Error?) -> ()) {
         self.isLoading = true
         // api service protocol with typed ingredients
-        
-            self.sections.append(HospitalSection())
+        _ = apiService?.requestInfos(with: "") { (success, resource) in
+            // temps sections for append if success
+            var tempSections: [Section] = []
+            if success, let resource = resource {
+                // parse resourc(e as recipe collection)!
+                
+                self.covidTab = resource as! HospitalCollections
+                let currentCollectionSection = HospitalSection(HospitalCollection: self.covidTab)
+                tempSections.append(currentCollectionSection)
+               
+                // append temps sections with recipeviewsection collection parsed
+                // define tempssections as sections
+                self.sections = tempSections
+                
 
-        
-        callback(nil)
+            }
+            // callback no recipeFound if error
+            callback(CovidError.noInfoFound)
+        }
         
     }
     

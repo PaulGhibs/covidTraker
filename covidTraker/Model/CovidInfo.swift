@@ -29,5 +29,11 @@ struct CovidCollection: Codable {
 }
 
 
+struct DayData {
+    let date : Date
+    let count: Int
+}
+
+
 
 

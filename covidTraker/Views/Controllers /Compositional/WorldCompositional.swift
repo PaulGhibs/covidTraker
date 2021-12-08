@@ -20,47 +20,10 @@ struct WorldCompositional : CompositionalLayoutProtocol {
                                                heightDimension: .fractionalHeight(0.8))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                                heightDimension: .fractionalHeight(0.13))
-        
-        let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
-                                                                        elementKind: UICollectionView.elementKindSectionHeader, alignment: .topLeading)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.boundarySupplementaryItems = [headerElement]
-        
-        
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        return layout
-        
-        
-            
-    }
-}
-
-struct MapCompositional : CompositionalLayoutProtocol {
- 
-    func create() -> UICollectionViewLayout  {
        
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                              heightDimension: .fractionalHeight(1))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                               heightDimension: .fractionalHeight(0.8))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                                heightDimension: .fractionalHeight(0.15))
-        
-        let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
-                                                                        elementKind: UICollectionView.elementKindSectionHeader, alignment: .topLeading)
-        
         
         let section = NSCollectionLayoutSection(group: group)
-        section.boundarySupplementaryItems = [headerElement]
-
-
+        
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
@@ -69,6 +32,8 @@ struct MapCompositional : CompositionalLayoutProtocol {
             
     }
 }
+
+
 
 struct HospitalCompositional : CompositionalLayoutProtocol {
  
@@ -76,18 +41,21 @@ struct HospitalCompositional : CompositionalLayoutProtocol {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(100))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = .init(top: 0, leading: 0, bottom: 15, trailing: 15)
+        item.contentInsets = .init(top: 0, leading: 10, bottom: 15, trailing: 15)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(500))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-       
-        let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets.leading = 15
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                heightDimension: .fractionalHeight(0.15))
         
-        section.boundarySupplementaryItems = [
-            NSCollectionLayoutBoundarySupplementaryItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.13)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-        ]
+        let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
+                                                                        elementKind: UICollectionView.elementKindSectionHeader, alignment: .topLeading)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        section.boundarySupplementaryItems = [headerElement]
+
         
         
         

@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="369" height="674"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgT-2t-pvB">
-                        <rect key="frame" x="25" y="33.5" width="144" height="50"/>
+                        <rect key="frame" x="25" y="83.5" width="144" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="144" id="5YN-NE-chU"/>
                             <constraint firstAttribute="height" constant="50" id="q7U-mk-FCK"/>
@@ -43,10 +43,9 @@
                         </userDefinedRuntimeAttributes>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZh-6O-MEg">
-                        <rect key="frame" x="186" y="33.5" width="144" height="50"/>
+                        <rect key="frame" x="186" y="83.5" width="144" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="144" id="0jg-KM-Shv"/>
-                            <constraint firstAttribute="height" constant="50" id="vdR-9U-3PD"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,9 +65,8 @@
                         </userDefinedRuntimeAttributes>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jda-0l-pMG">
-                        <rect key="frame" x="25" y="108.5" width="144" height="47"/>
+                        <rect key="frame" x="25" y="153.5" width="144" height="47"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="47" id="VSw-wc-K2K"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="vbw-6I-LG6"/>
                             <constraint firstAttribute="width" constant="144" id="xCI-xa-LzN"/>
                         </constraints>
@@ -90,7 +88,7 @@
                         </userDefinedRuntimeAttributes>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUk-My-mA7">
-                        <rect key="frame" x="186" y="108.5" width="144" height="47"/>
+                        <rect key="frame" x="186" y="153.5" width="144" height="47"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="144" id="Cak-EH-YeO"/>
                         </constraints>
@@ -132,33 +130,52 @@
                             <constraint firstAttribute="bottom" secondItem="Y2Z-Cg-prk" secondAttribute="bottom" constant="8" id="lK2-FT-jfq"/>
                         </constraints>
                     </view>
+                    <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-T3-wY4">
+                        <rect key="frame" x="0.0" y="0.0" width="369" height="50"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="2cY-KW-q6u"/>
+                            <constraint firstAttribute="width" constant="369" id="trV-re-TdS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <size key="shadowOffset" width="1" height="0.0"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
             <constraints>
-                <constraint firstItem="jda-0l-pMG" firstAttribute="top" secondItem="KgT-2t-pvB" secondAttribute="bottom" constant="25" id="1G5-Su-6Xb"/>
+                <constraint firstItem="jda-0l-pMG" firstAttribute="top" secondItem="KgT-2t-pvB" secondAttribute="bottom" constant="20" id="1G5-Su-6Xb"/>
                 <constraint firstItem="13g-ar-Z4h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3mB-mO-Yu5"/>
+                <constraint firstItem="KgT-2t-pvB" firstAttribute="top" secondItem="HOb-T3-wY4" secondAttribute="bottom" constant="33.5" id="5jK-tX-8Ca"/>
                 <constraint firstAttribute="bottom" secondItem="GuC-Ga-jwA" secondAttribute="bottom" constant="20" id="6mu-Ys-vrS"/>
                 <constraint firstAttribute="bottom" secondItem="13g-ar-Z4h" secondAttribute="bottom" id="7wV-CI-fyW"/>
                 <constraint firstItem="GuC-Ga-jwA" firstAttribute="centerX" secondItem="13g-ar-Z4h" secondAttribute="centerX" id="AjP-hD-FaE"/>
-                <constraint firstItem="aUk-My-mA7" firstAttribute="firstBaseline" secondItem="jda-0l-pMG" secondAttribute="firstBaseline" id="CzE-r9-OHr"/>
                 <constraint firstItem="GuC-Ga-jwA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="26" id="Ich-FV-ZUx"/>
+                <constraint firstItem="HOb-T3-wY4" firstAttribute="centerX" secondItem="GuC-Ga-jwA" secondAttribute="centerX" id="Izl-u1-pqM"/>
                 <constraint firstItem="jda-0l-pMG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="JbJ-os-1OP"/>
+                <constraint firstItem="aUk-My-mA7" firstAttribute="centerY" secondItem="jda-0l-pMG" secondAttribute="centerY" id="O9C-IP-Ebf"/>
                 <constraint firstItem="13g-ar-Z4h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OSM-aH-Li9"/>
                 <constraint firstItem="13g-ar-Z4h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Pou-uw-EYZ"/>
-                <constraint firstItem="aUk-My-mA7" firstAttribute="top" secondItem="xZh-6O-MEg" secondAttribute="bottom" constant="25" id="V0j-w9-zmP"/>
+                <constraint firstItem="xZh-6O-MEg" firstAttribute="firstBaseline" secondItem="KgT-2t-pvB" secondAttribute="firstBaseline" id="SnK-eL-0z8"/>
+                <constraint firstItem="aUk-My-mA7" firstAttribute="top" secondItem="xZh-6O-MEg" secondAttribute="bottom" constant="20" id="V0j-w9-zmP"/>
+                <constraint firstItem="HOb-T3-wY4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vvz-3p-d1d"/>
                 <constraint firstAttribute="trailing" secondItem="13g-ar-Z4h" secondAttribute="trailing" id="Wwi-0n-Ngw"/>
                 <constraint firstItem="jda-0l-pMG" firstAttribute="centerX" secondItem="KgT-2t-pvB" secondAttribute="centerX" id="WyG-0N-Ze9"/>
                 <constraint firstItem="aUk-My-mA7" firstAttribute="trailing" secondItem="xZh-6O-MEg" secondAttribute="trailing" id="Xwl-hE-TXl"/>
                 <constraint firstItem="aUk-My-mA7" firstAttribute="leading" secondItem="jda-0l-pMG" secondAttribute="trailing" constant="17" id="YrX-wn-ONT"/>
-                <constraint firstItem="GuC-Ga-jwA" firstAttribute="top" secondItem="jda-0l-pMG" secondAttribute="bottom" constant="75.5" id="Z8F-6o-mrq"/>
+                <constraint firstItem="GuC-Ga-jwA" firstAttribute="top" secondItem="jda-0l-pMG" secondAttribute="bottom" constant="30.5" id="Z8F-6o-mrq"/>
+                <constraint firstItem="xZh-6O-MEg" firstAttribute="baseline" secondItem="KgT-2t-pvB" secondAttribute="baseline" id="ZcN-2r-IZB"/>
+                <constraint firstAttribute="trailing" secondItem="HOb-T3-wY4" secondAttribute="trailing" id="aBa-qH-NHa"/>
                 <constraint firstItem="aUk-My-mA7" firstAttribute="centerX" secondItem="xZh-6O-MEg" secondAttribute="centerX" id="eHB-rw-nAp"/>
-                <constraint firstItem="aUk-My-mA7" firstAttribute="baseline" secondItem="jda-0l-pMG" secondAttribute="baseline" id="eRm-wo-qAb"/>
                 <constraint firstItem="GuC-Ga-jwA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="231" id="eqm-4T-Xyd"/>
                 <constraint firstAttribute="trailing" secondItem="13g-ar-Z4h" secondAttribute="trailing" id="iai-yV-NVe"/>
                 <constraint firstAttribute="trailing" secondItem="aUk-My-mA7" secondAttribute="trailing" constant="39" id="igM-IL-zUK"/>
                 <constraint firstItem="13g-ar-Z4h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jVC-w2-6gk"/>
+                <constraint firstItem="HOb-T3-wY4" firstAttribute="top" secondItem="13g-ar-Z4h" secondAttribute="top" id="o5g-tf-yF7"/>
                 <constraint firstItem="jda-0l-pMG" firstAttribute="leading" secondItem="KgT-2t-pvB" secondAttribute="leading" id="z0m-Vz-CNa"/>
             </constraints>
             <size key="customSize" width="369" height="674"/>
@@ -169,17 +186,24 @@
                 <outlet property="totalDeaths" destination="jda-0l-pMG" id="gCf-2F-Lxz"/>
                 <outlet property="totalRecovered" destination="xZh-6O-MEg" id="GTa-aL-8Dn"/>
                 <outlet property="updatedAt" destination="Y2Z-Cg-prk" id="ZFi-Xj-jUQ"/>
+                <outlet property="wordSituation" destination="HOb-T3-wY4" id="5zp-xh-Dws"/>
             </connections>
             <point key="canvasLocation" x="10.869565217391305" y="166.74107142857142"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="background" width="675" height="1200"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

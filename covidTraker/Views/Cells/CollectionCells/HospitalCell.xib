@@ -45,6 +45,8 @@
             <size key="customSize" width="262" height="94"/>
             <connections>
                 <outlet property="HospitalName" destination="HDI-3B-zor" id="ged-DT-g5Z"/>
+                <outlet property="establishmentPlace" destination="HDI-3B-zor" id="kNm-Zf-SXC"/>
+                <outlet property="imagePlace" destination="hK8-VO-Ar8" id="Yvs-8W-41R"/>
             </connections>
             <point key="canvasLocation" x="308.69565217391306" y="99.107142857142847"/>
         </collectionViewCell>

@@ -50,7 +50,7 @@ class ResultViewModel: ViewModel {
     func loadData(callback: @escaping (Error?) -> ()) {
         self.isLoading = true
         // api service protocol with typed ingredients
-        _ = apiService?.requestInfos(with: "France") { (success, resource) in
+        _ = apiService?.requestInfos(with: ResultViewModel.countryChoosen) { (success, resource) in
             // temps sections for append if success
             var tempSections: [Section] = []
             if success, let resource = resource {

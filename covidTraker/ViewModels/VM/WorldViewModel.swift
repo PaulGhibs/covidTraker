@@ -36,7 +36,7 @@ class WorldViewModel: ViewModel {
     func loadData(callback: @escaping (Error?) -> ()) {
         self.isLoading = true
         // api service protocol with typed ingredients
-        _ = apiService?.requestInfos(with: "Cupertino") { (success, resource) in
+        _ = apiService?.requestInfos(with: "World") { (success, resource) in
             // temps sections for append if success
             var tempSections: [Section] = []
             if success, let resource = resource {

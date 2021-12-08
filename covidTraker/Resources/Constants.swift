@@ -23,13 +23,15 @@ struct Constants {
 
 
 
-struct Endpoint {
- static let endpointGooglePlace = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?&key=\(Constants.valueAPIKey("apiPlaces"))&type=hospital&radius=500"
-    // API KEYS setup in constants.swift
-}
 
 
 
 struct CountryChoosen {
-    static let choosenCountry = "choosenIngredients"
+    static let choosenCountry = "choosenCountry"
+}
+
+
+struct Coordinates {
+    var latitude: String
+    var longitude: String
 }

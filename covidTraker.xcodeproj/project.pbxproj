@@ -28,7 +28,6 @@
 		6155B3DB2749C02C006A04BF /* CovidError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155B3C02749C02C006A04BF /* CovidError.swift */; };
 		6155B3DC2749C02C006A04BF /* CellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155B3C12749C02C006A04BF /* CellVM.swift */; };
 		6155B3DE2749C02C006A04BF /* CellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155B3C52749C02C006A04BF /* CellConfigurable.swift */; };
-		6155B3E02749C02C006A04BF /* WorldReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6155B3C82749C02C006A04BF /* WorldReusableView.xib */; };
 		6155B3E22749C02C006A04BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6155B3CA2749C02C006A04BF /* LaunchScreen.storyboard */; };
 		6155B3E32749C02C006A04BF /* CompositionalLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155B3CE2749C02C006A04BF /* CompositionalLayoutProtocol.swift */; };
 		6155B3E42749C02C006A04BF /* WorldCompositional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155B3CF2749C02C006A04BF /* WorldCompositional.swift */; };
@@ -37,10 +36,12 @@
 		6155B3E72749C02C006A04BF /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155B3D32749C02C006A04BF /* BaseCollectionViewController.swift */; };
 		6155B3EB2749C048006A04BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155B3E92749C048006A04BF /* Constants.swift */; };
 		DC47935C5720143FFB6653F4 /* Pods_covidTraker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F77EBBA6D9DB43622E0A4888 /* Pods_covidTraker.framework */; };
+		F40902B6275FE70B009B1415 /* HospitalHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40902B4275FE70B009B1415 /* HospitalHeaderView.xib */; };
+		F40902B7275FE70B009B1415 /* HospitalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40902B5275FE70B009B1415 /* HospitalHeaderView.swift */; };
+		F40902B9275FE71A009B1415 /* HospitalHeaderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40902B8275FE71A009B1415 /* HospitalHeaderVM.swift */; };
+		F40902BA275FF44A009B1415 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4F06F21275D356C00DA5633 /* ApiKeys.plist */; };
 		F429EF8E2754E2A500CF5891 /* WorldSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429EF8D2754E2A500CF5891 /* WorldSection.swift */; };
-		F429EF912754E2B200CF5891 /* WorldHeaderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429EF8F2754E2B200CF5891 /* WorldHeaderVM.swift */; };
 		F429EF922754E2B200CF5891 /* WorldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429EF902754E2B200CF5891 /* WorldViewModel.swift */; };
-		F429EF9427552A0A00CF5891 /* WorldReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429EF9327552A0A00CF5891 /* WorldReusableView.swift */; };
 		F429EF9627552A6B00CF5891 /* DataFlowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429EF9527552A6B00CF5891 /* DataFlowService.swift */; };
 		F44D41942757C484002F1634 /* UiLabelExtent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D41932757C484002F1634 /* UiLabelExtent.swift */; };
 		F44D41962757D893002F1634 /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D41952757D893002F1634 /* GoogleService.swift */; };
@@ -49,9 +50,6 @@
 		F46DC5C62758D8B5009C8A1B /* HospitalCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46DC5C52758D8B5009C8A1B /* HospitalCellViewModel.swift */; };
 		F46DC5CB2758D913009C8A1B /* HospitalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46DC5C92758D913009C8A1B /* HospitalCell.swift */; };
 		F46DC5CC2758D913009C8A1B /* HospitalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46DC5CA2758D913009C8A1B /* HospitalCell.xib */; };
-		F46DC5CF2758E3C6009C8A1B /* HospitalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46DC5CD2758E3C6009C8A1B /* HospitalHeaderView.swift */; };
-		F46DC5D02758E3C6009C8A1B /* HospitalHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46DC5CE2758E3C6009C8A1B /* HospitalHeaderView.xib */; };
-		F46DC5D22758E423009C8A1B /* HospitalHeaderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46DC5D12758E423009C8A1B /* HospitalHeaderVM.swift */; };
 		F46DC5D427591779009C8A1B /* HospitalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46DC5D327591779009C8A1B /* HospitalInfo.swift */; };
 		F4F06F37275E4D2100DA5633 /* BasicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F06F35275E4D2100DA5633 /* BasicTableViewController.swift */; };
 		F4F06F38275E4D2100DA5633 /* BasicTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F06F36275E4D2100DA5633 /* BasicTableViewController.xib */; };
@@ -96,7 +94,6 @@
 		6155B3C02749C02C006A04BF /* CovidError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CovidError.swift; sourceTree = "<group>"; };
 		6155B3C12749C02C006A04BF /* CellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellVM.swift; sourceTree = "<group>"; };
 		6155B3C52749C02C006A04BF /* CellConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConfigurable.swift; sourceTree = "<group>"; };
-		6155B3C82749C02C006A04BF /* WorldReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorldReusableView.xib; sourceTree = "<group>"; };
 		6155B3CB2749C02C006A04BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6155B3CE2749C02C006A04BF /* CompositionalLayoutProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutProtocol.swift; sourceTree = "<group>"; };
 		6155B3CF2749C02C006A04BF /* WorldCompositional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldCompositional.swift; sourceTree = "<group>"; };
@@ -111,10 +108,11 @@
 		F409029C275FC2EC009B1415 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40902A0275FC37A009B1415 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40902AA275FC696009B1415 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40902B4275FE70B009B1415 /* HospitalHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalHeaderView.xib; sourceTree = "<group>"; };
+		F40902B5275FE70B009B1415 /* HospitalHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalHeaderView.swift; sourceTree = "<group>"; };
+		F40902B8275FE71A009B1415 /* HospitalHeaderVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalHeaderVM.swift; sourceTree = "<group>"; };
 		F429EF8D2754E2A500CF5891 /* WorldSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldSection.swift; sourceTree = "<group>"; };
-		F429EF8F2754E2B200CF5891 /* WorldHeaderVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldHeaderVM.swift; sourceTree = "<group>"; };
 		F429EF902754E2B200CF5891 /* WorldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldViewModel.swift; sourceTree = "<group>"; };
-		F429EF9327552A0A00CF5891 /* WorldReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldReusableView.swift; sourceTree = "<group>"; };
 		F429EF9527552A6B00CF5891 /* DataFlowService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFlowService.swift; sourceTree = "<group>"; };
 		F44D41932757C484002F1634 /* UiLabelExtent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiLabelExtent.swift; sourceTree = "<group>"; };
 		F44D41952757D893002F1634 /* GoogleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
@@ -123,9 +121,6 @@
 		F46DC5C52758D8B5009C8A1B /* HospitalCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalCellViewModel.swift; sourceTree = "<group>"; };
 		F46DC5C92758D913009C8A1B /* HospitalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalCell.swift; sourceTree = "<group>"; };
 		F46DC5CA2758D913009C8A1B /* HospitalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalCell.xib; sourceTree = "<group>"; };
-		F46DC5CD2758E3C6009C8A1B /* HospitalHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalHeaderView.swift; sourceTree = "<group>"; };
-		F46DC5CE2758E3C6009C8A1B /* HospitalHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalHeaderView.xib; sourceTree = "<group>"; };
-		F46DC5D12758E423009C8A1B /* HospitalHeaderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalHeaderVM.swift; sourceTree = "<group>"; };
 		F46DC5D327591779009C8A1B /* HospitalInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalInfo.swift; sourceTree = "<group>"; };
 		F4F06F21275D356C00DA5633 /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		F4F06F35275E4D2100DA5633 /* BasicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewController.swift; sourceTree = "<group>"; };
@@ -269,9 +264,9 @@
 			isa = PBXGroup;
 			children = (
 				F429EF902754E2B200CF5891 /* WorldViewModel.swift */,
-				F46DC5C32758D8A4009C8A1B /* HospitalViewModel.swift */,
 				F4F06F3D275E4D8700DA5633 /* CountryViewModel.swift */,
 				F4F06F66275F6AEF00DA5633 /* ResultViewModel.swift */,
+				F46DC5C32758D8A4009C8A1B /* HospitalViewModel.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -311,23 +306,11 @@
 		6155B3C32749C02C006A04BF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F4F06F3F275E514C00DA5633 /* TableCells */,
 				6155B3C52749C02C006A04BF /* CellConfigurable.swift */,
+				F4F06F3F275E514C00DA5633 /* TableCells */,
 				F4F06EEE275D078900DA5633 /* CollectionCells */,
-				6155B3C72749C02C006A04BF /* Reusable */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		6155B3C72749C02C006A04BF /* Reusable */ = {
-			isa = PBXGroup;
-			children = (
-				F429EF9327552A0A00CF5891 /* WorldReusableView.swift */,
-				6155B3C82749C02C006A04BF /* WorldReusableView.xib */,
-				F46DC5CD2758E3C6009C8A1B /* HospitalHeaderView.swift */,
-				F46DC5CE2758E3C6009C8A1B /* HospitalHeaderView.xib */,
-			);
-			path = Reusable;
 			sourceTree = "<group>";
 		};
 		6155B3CC2749C02C006A04BF /* Controllers  */ = {
@@ -392,8 +375,7 @@
 		F46DC5DB2759446F009C8A1B /* HeadersVM */ = {
 			isa = PBXGroup;
 			children = (
-				F429EF8F2754E2B200CF5891 /* WorldHeaderVM.swift */,
-				F46DC5D12758E423009C8A1B /* HospitalHeaderVM.swift */,
+				F40902B8275FE71A009B1415 /* HospitalHeaderVM.swift */,
 			);
 			path = HeadersVM;
 			sourceTree = "<group>";
@@ -401,6 +383,8 @@
 		F4F06EEE275D078900DA5633 /* CollectionCells */ = {
 			isa = PBXGroup;
 			children = (
+				F40902B5275FE70B009B1415 /* HospitalHeaderView.swift */,
+				F40902B4275FE70B009B1415 /* HospitalHeaderView.xib */,
 				61285159274AFDCB00ADA064 /* WorldCell.swift */,
 				6128515A274AFDCB00ADA064 /* WorldCell.xib */,
 				F46DC5C92758D913009C8A1B /* HospitalCell.swift */,
@@ -469,7 +453,7 @@
 			);
 			mainGroup = 6155B3742749BF96006A04BF;
 			packageReferences = (
-				F409029F275FC34F009B1415 /* XCRemoteSwiftPackageReference "Charts.git" */,
+				F409029F275FC34F009B1415 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 6155B37E2749BF96006A04BF /* Products */;
 			projectDirPath = "";
@@ -488,14 +472,14 @@
 				F4F06F5D275E811600DA5633 /* labelCell.xib in Resources */,
 				F4F06F65275E865300DA5633 /* InfoButton.xib in Resources */,
 				F46DC5CC2758D913009C8A1B /* HospitalCell.xib in Resources */,
+				F40902BA275FF44A009B1415 /* ApiKeys.plist in Resources */,
 				6128515C274AFDCB00ADA064 /* WorldCell.xib in Resources */,
-				6155B3E02749C02C006A04BF /* WorldReusableView.xib in Resources */,
 				6155B3E22749C02C006A04BF /* LaunchScreen.storyboard in Resources */,
 				F4F06F4F275E588D00DA5633 /* CountryCell.xib in Resources */,
 				6155B38D2749BF97006A04BF /* Assets.xcassets in Resources */,
 				F4F06F38275E4D2100DA5633 /* BasicTableViewController.xib in Resources */,
 				6155B3E62749C02C006A04BF /* BaseCollectionViewController.xib in Resources */,
-				F46DC5D02758E3C6009C8A1B /* HospitalHeaderView.xib in Resources */,
+				F40902B6275FE70B009B1415 /* HospitalHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +540,6 @@
 				6155B3E32749C02C006A04BF /* CompositionalLayoutProtocol.swift in Sources */,
 				F429EF8E2754E2A500CF5891 /* WorldSection.swift in Sources */,
 				6155B3E42749C02C006A04BF /* WorldCompositional.swift in Sources */,
-				F46DC5D22758E423009C8A1B /* HospitalHeaderVM.swift in Sources */,
 				6155B3E52749C02C006A04BF /* TabBar.swift in Sources */,
 				6155B3AD2749C016006A04BF /* UIViewController+Controller.swift in Sources */,
 				F4F06F67275F6AEF00DA5633 /* ResultViewModel.swift in Sources */,
@@ -564,6 +547,7 @@
 				F4F06F3A275E4D3A00DA5633 /* CountryCellViewModel.swift in Sources */,
 				F4F06F5F275E81FE00DA5633 /* ResultSection.swift in Sources */,
 				6155B3B42749C016006A04BF /* Navigator.swift in Sources */,
+				F40902B7275FE70B009B1415 /* HospitalHeaderView.swift in Sources */,
 				F4F06F59275E7FEE00DA5633 /* ResultCellViewModel.swift in Sources */,
 				F4F06F3C275E4D6700DA5633 /* SearchSections.swift in Sources */,
 				F4F06F37275E4D2100DA5633 /* BasicTableViewController.swift in Sources */,
@@ -573,8 +557,6 @@
 				6155B3E72749C02C006A04BF /* BaseCollectionViewController.swift in Sources */,
 				F4F06F5C275E811600DA5633 /* labelCell.swift in Sources */,
 				F44D41942757C484002F1634 /* UiLabelExtent.swift in Sources */,
-				F429EF912754E2B200CF5891 /* WorldHeaderVM.swift in Sources */,
-				F429EF9427552A0A00CF5891 /* WorldReusableView.swift in Sources */,
 				F46DC5C62758D8B5009C8A1B /* HospitalCellViewModel.swift in Sources */,
 				F429EF9627552A6B00CF5891 /* DataFlowService.swift in Sources */,
 				F4F06F64275E865300DA5633 /* InfoButton.swift in Sources */,
@@ -582,8 +564,8 @@
 				6155B3AE2749C016006A04BF /* UINavigationController+NavController.swift in Sources */,
 				6155B3DE2749C02C006A04BF /* CellConfigurable.swift in Sources */,
 				6155B3812749BF96006A04BF /* AppDelegate.swift in Sources */,
-				F46DC5CF2758E3C6009C8A1B /* HospitalHeaderView.swift in Sources */,
 				F44D41962757D893002F1634 /* GoogleService.swift in Sources */,
+				F40902B9275FE71A009B1415 /* HospitalHeaderVM.swift in Sources */,
 				F4F06F3E275E4D8700DA5633 /* CountryViewModel.swift in Sources */,
 				6155B3EB2749C048006A04BF /* Constants.swift in Sources */,
 				6155B3DA2749C02C006A04BF /* Section.swift in Sources */,
@@ -817,7 +799,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F409029F275FC34F009B1415 /* XCRemoteSwiftPackageReference "Charts.git" */ = {
+		F409029F275FC34F009B1415 /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts.git";
 			requirement = {

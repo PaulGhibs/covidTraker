@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HospitalCell: UICollectionViewCell {
 
     @IBOutlet weak var HospitalName: UILabel!
     
+    @IBOutlet weak var imagePlace: UIImageView!
+    
+    @IBOutlet weak var establishmentPlace: UILabel!
+    
+    var hospitalCollection : HospitalCollections?
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -23,6 +29,8 @@ class HospitalCell: UICollectionViewCell {
            }
       
         
+        self.hospitalCollection = cellVM.hospitalCollection
+        self.HospitalName.text = cellVM.hospitalCollection?.results.first?.name
         
       
     }

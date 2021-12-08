@@ -19,10 +19,10 @@ class HospitalCellViewModel: CellViewModel {
     var nibName: String? = "HospitalCell"
     lazy var reuseIdentifier: String = String(describing: self)
     
-    var covidCollection : HospitalCollections?
+    var hospitalCollection : HospitalCollections?
   
-    init( routingEntry : RoutingEntry) {
-  
+    init(hospitalCollection: HospitalCollections, routingEntry : RoutingEntry) {
+        self.hospitalCollection = hospitalCollection
         self.routingEntry = routingEntry
     }
     

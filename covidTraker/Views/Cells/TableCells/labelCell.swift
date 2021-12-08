@@ -22,26 +22,12 @@ class labelCell: UITableViewCell {
 
     
     
-    static let numberFormatter: NumberFormatter = {
-        let formater = NumberFormatter()
-        formater.locale = .current
-        formater.formatterBehavior = .default
-        formater.usesGroupingSeparator = true
-        formater.groupingSeparator = ","
-        
-        
-        return formater
-    }()
-    
-    
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         totalCovidCases.textDropShadow()
         totalRecovered.textDropShadow()
         totalDeaths.textDropShadow()
         newCases.textDropShadow()
-        countryName.textDropShadow()
         chartView.layer.cornerRadius = 12
         chartView.layer.borderColor = UIColor.lightGray.cgColor
         chartView.layer.backgroundColor = UIColor.white.cgColor
@@ -53,7 +39,7 @@ class labelCell: UITableViewCell {
   
     }
     
-    private var dayData =  [CovidCollection]()
+    private var dayData = [CovidCollection]()
     
     override func configure(cellViewModel: CellViewModel, from controller: UIViewController) {
            guard let cellVM = cellViewModel as? ResultCellViewModel else {
@@ -75,7 +61,7 @@ class labelCell: UITableViewCell {
         
  
         
-        createGraph()
+        self.createGraph()
 //
      }
     
@@ -83,12 +69,13 @@ class labelCell: UITableViewCell {
       
         let headerview = self.chartView
         
-        let set = self.dayData.prefix(5)
-        var entries : [ChartDataEntry] = []
+        let set = self.dayData
+        var entries : [ChartDataEntry] = [ChartDataEntry(x: 0, y: 10), ChartDataEntry(x: 1, y: 5.0), ChartDataEntry(x: 2, y: 7.0), ChartDataEntry(x: 3, y: 6.0), ChartDataEntry(x: 4, y: 16.0)]
 
-        for index in 0..<set.count {
-            let data = set
-            entries.append(.init(x: Double(index), y: Double(data.count)))
+       
+        
+        for index in set {
+            entries.append(.init(x: Double(index.activeCasesText) ?? 0, y: Double(index.totalCasesText) ?? 0))
         }
         let dataSet = LineChartDataSet(entries: entries, label: "Covid cases")
         // Chart colors template
@@ -106,6 +93,7 @@ class labelCell: UITableViewCell {
         
         let chart = LineChartView(frame: CGRect(x: 0, y: 10, width: chartView.frame.size.width, height: chartView.frame.size.width))
         chart.rightAxis.enabled = false
+        
         chart.data = data
         // subviews
        

@@ -19,7 +19,7 @@ class HospitalHeaderVM: CollectionCellViewModel {
     var nibName: String? = "HospitalHeaderView"
     lazy var reuseIdentifier: String = String(describing: self)
     
-    var world : String
+    var world: String
     
     init(world: String) {
      

@@ -16,16 +16,16 @@ class HospitalSection: CollectionSection {
     var title: String?
     var cellsVM: [CellViewModel]
     
-    init() {
+    init(HospitalCollection: HospitalCollections) {
         self.position = 0
         self.title = ""
         
-        self.headerVM = HospitalHeaderVM(world: "📍 Hospitals 🏥 ")
+        self.headerVM = HospitalHeaderVM(world: "📍🏥 Nearby your position")
 
         self.cellsVM = [CellViewModel]()
 
         for _ in 0..<4 {
-        let hospitalcellVM = HospitalCellViewModel(routingEntry: WorldCellEntry())
+            let hospitalcellVM = HospitalCellViewModel(hospitalCollection: HospitalCollection, routingEntry: WorldCellEntry())
         self.cellsVM.append(hospitalcellVM)
         }
     }

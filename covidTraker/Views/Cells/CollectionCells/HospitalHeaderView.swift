@@ -11,9 +11,7 @@ class HospitalHeaderView: UICollectionReusableView {
 
     @IBOutlet weak var TitleHeader: UILabel!
     
-    override func layoutSubviews() {
-        TitleHeader.textDropShadow()
-    }
+   
     
     override func configure(cellViewModel: CellViewModel, from controller: UIViewController) {
             guard let headerVM = cellViewModel as? HospitalHeaderVM else {

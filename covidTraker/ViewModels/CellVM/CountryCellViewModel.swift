@@ -15,7 +15,7 @@ class CountryCellViewModel: TableCellViewModel {
     
     
     var height: Float {
-        return 420
+        return 450
     }
     
     var indexPath: IndexPath?

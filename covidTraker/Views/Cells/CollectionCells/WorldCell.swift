@@ -7,9 +7,15 @@
 
 import UIKit
 import Charts
+import CoreLocation
 
-class WorldCell: UICollectionViewCell {
+class WorldCell: UICollectionViewCell, CLLocationManagerDelegate {
 
+    let manager = CLLocationManager()
+    
+    var tempsLocations = [Coordinates]()
+
+    @IBOutlet weak var wordSituation: UILabel!
     @IBOutlet weak var chartView: UIView!
     @IBOutlet weak var totalCovidCases: UILabel!
     @IBOutlet weak var totalRecovered: UILabel!
@@ -19,7 +25,7 @@ class WorldCell: UICollectionViewCell {
     @IBOutlet weak var updatedAt: UILabel!
     
     private var dayData: CovidCollection!
-    
+
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -42,6 +48,7 @@ class WorldCell: UICollectionViewCell {
                return
            }
         self.dayData = cellVM.covidCollection
+        self.wordSituation.text = " World Situation 🌍 "
         self.totalCovidCases.text =  "Total Covid Cases 🦠 \(dayData.totalCasesText)"
         self.totalRecovered.text =  "Total Recovered 💉 \(dayData.totalRecoveredText)"
         self.totalDeaths.text = "Total Deaths 🪦 \(dayData.totalDeathsText)"
@@ -50,30 +57,41 @@ class WorldCell: UICollectionViewCell {
         
         
         
-        createGraph()
-        
+        manager.delegate = self
+        manager.requestAlwaysAuthorization()
+        self.saveLocation(manager.location!)
+        self.createGraph()
+
 //
      }
+    
+    func saveLocation(_ location: CLLocation) {
+        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let user_lat = String(format: "%f", coordinate.latitude)
+        let user_long = String(format: "%f", coordinate.longitude)
+        let coordinatesSaved = Coordinates.init(latitude: user_lat, longitude: user_long)
+        tempsLocations.append(coordinatesSaved)
+        NotificationCenter.default.post(name: .newCoordinatesPost, object: tempsLocations)
+        
+    }
        
+  
     
     
-    
-    
+   
     
     
     private func createGraph() {
       
         let headerview = self.chartView
-        
-        let set = self.dayData!
-        var entries : [ChartDataEntry] = []
-        entries.append(.init(x: Double(dayData.totalCasesText) ?? 10.0, y: Double(set.newDeathsText) ?? 10.0 ))
-
+        var entries : [ChartDataEntry] = [ChartDataEntry(x: 0, y: 0)]
+        entries.append(ChartDataEntry(x: (dayData.newCasesText as NSString).doubleValue, y: (dayData.newCasesText as NSString).doubleValue))
+   
         let dataSet = LineChartDataSet(entries: entries, label: "Covid cases")
         // Chart colors template
         dataSet.colors = ChartColorTemplates.colorful()
-        dataSet.mode = .cubicBezier
-        dataSet.lineWidth = 2
+        dataSet.mode = .horizontalBezier
+        dataSet.lineWidth = 1
         dataSet.circleRadius = 4
         dataSet.setCircleColor(.black)
     
@@ -84,6 +102,7 @@ class WorldCell: UICollectionViewCell {
         
         let chart = LineChartView(frame: CGRect(x: 0, y: 10, width: chartView.frame.size.width, height: chartView.frame.size.width))
         chart.rightAxis.enabled = false
+        chart.leftAxis.enabled = false
         chart.data = data
         // subviews
        
@@ -92,4 +111,8 @@ class WorldCell: UICollectionViewCell {
     }
     
 
+}
+
+extension Notification.Name {
+    static let newCoordinatesPost = Notification.Name("new_coordinates_post")
 }

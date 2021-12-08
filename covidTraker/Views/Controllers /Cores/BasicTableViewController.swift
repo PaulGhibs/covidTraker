@@ -26,13 +26,17 @@ class BasicTableViewController: UITableViewController  {
         super.init(coder: coder)
     }
         
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+       
         guard (self.viewModel as? CellViewModel) != nil else {
           
             navigationItem.title = viewModel?.titleTabBar
             return
         }
+       
        
     }
   
@@ -46,11 +50,12 @@ class BasicTableViewController: UITableViewController  {
         self.navigationController!.navigationBar.backIndicatorImage = renderedImage
         self.navigationController!.navigationBar.backIndicatorTransitionMaskImage = renderedImage
         self.navigationController!.navigationBar.backgroundColor = .systemBackground
-        
-    
-        self.viewModel?.loadData { _ in
-            self.tableView.reloadData()
-            self.registerCells()
+      
+       
+        self.viewModel?.loadData {[weak self] _ in
+            
+                self?.tableView.reloadData()
+                self?.registerCells()
 
         }
        
@@ -134,55 +139,9 @@ class BasicTableViewController: UITableViewController  {
     }
     
     
-    // MARK: - Editing Cell for TableEditedCellViewModel
 
  
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        guard let cellVM = self.viewModel?.item(at: indexPath) as? TableEditedCellViewModel else {
-            return
-        }
-        
-        if editingStyle == .delete {
-            
-            cellVM.completionEdit { [weak self] error in
-                self!.viewModel?.remove(at: indexPath)
-                
-                self!.tableView.deleteRows(at: [indexPath], with: .automatic)
-                guard error != nil else {
-                    let newRouting = Routing()
 
-                    let alert = AlertRoutingEntry(message: "Recipe deleted from favorites", title: NSLocalizedString("⚠️", comment: "Error"))
-
-                    _ = newRouting
-                        .route(routingEntry: alert, fromController: self!, animated: true)
-                    return
-                }
-               
-                
-
-        }
-    }
-    }
-    
-   override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        // cell vm delete func protocol
-
-        guard let cellVM = self.viewModel?.item(at: indexPath) as? TableEditedCellViewModel else {
-            return .none
-        }
-        
-        if cellVM.canEdit {
-                return .delete
-            }
-            
-            else {
-                return .none
-            }
-       }
-    
-
-  
   
     
     // MARK: - Register Cells

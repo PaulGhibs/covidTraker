@@ -12,17 +12,16 @@ import CoreLocation
 
 
 class GoogleMapService: APIService {
-    // MARK: - Properties
 
     // MARK: - Properties
-    static let covidTab : [CovidCollection] = []
+    static let HospitalTab : [HospitalCollections] = []
   
     func requestInfos(with country: String, callback: @escaping DataFlowService.Callback) {
         // Try api call or return callback false nil if url is good
         let url: URL!
         do {
             
-            url = try DataFlowService.createURL(with: country)
+            url = try GoogleMapService.createURL()
             
         } catch {
             return callback(false, nil)
@@ -34,8 +33,9 @@ class GoogleMapService: APIService {
             // parse data if sucess and callback true with ressources
             switch response.result {
             case .success:
-                let resource: CovidCollection = DataFlowService.parse(response.data!)
+                let resource: HospitalCollections = DataFlowService.parse(response.data!)
                 callback(true, resource)
+                print(resource)
                 // print error if failure and callback false with nil
             case .failure(let error):
                 print("Error : \(error)" )
@@ -47,32 +47,43 @@ class GoogleMapService: APIService {
    
 
    
-    static func createURL(with country: String) throws -> URL? {
-        let completeURL = "https://covid-19.dataflowkit.com/v1/" + country
+    static func createURL() throws -> URL? {
+       
+        
+        var coordinates : [Coordinates] = []
+        let baseURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="
+        
+        NotificationCenter.default.addObserver(forName: .newCoordinatesPost, object: nil, queue: .main) { notification in
+                    // Display image
+            guard let getcoord = notification.object as? Coordinates else {
+                return
+            }
+            coordinates.append(getcoord)
+           
+        }
+        
+       
+        
+        let completeURL = baseURL + (coordinates.first?.latitude) + "%2C" + (coordinates.first?.longitude) + "&key=\(Constants.valueAPIKey("GoogleApi"))&type=hospital&radius=500"
         print(completeURL)
         return URL(string: completeURL)
     }
     
-    static func parse<CovidCollection: Decodable>(_ data: Data) -> CovidCollection {
+    
+ 
+    static func parse<HospitalCollections: Decodable>(_ data: Data) -> HospitalCollections {
         do {
-            let covid = try JSONDecoder().decode(CovidCollection.self, from: data)
-            return covid
-            
-        } catch DecodingError.dataCorrupted(let context) {
-                print(context.debugDescription)
-            } catch DecodingError.keyNotFound(let key, let context) {
-                print("\(key.stringValue) was not found, \(context.debugDescription)")
-            } catch DecodingError.typeMismatch(let type, let context) {
-                print("\(type) was expected, \(context.debugDescription)")
-            } catch DecodingError.valueNotFound(let type, let context) {
-                print("no value was found for \(type), \(context.debugDescription)")
-            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let root = try decoder.decode(HospitalCollections.self, from: data)
+            print(root)
+            return root
         } catch {
-            print("Unknown error")
+            print(error)
         }
        
         // result as recipecollection above
-        return self.covidTab as! CovidCollection
+        return self.HospitalTab as! HospitalCollections
     }
     
   
