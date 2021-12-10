@@ -53,10 +53,10 @@ class CountryCell: UITableViewCell, CLLocationManagerDelegate {
                 return
             }
             
-            self.locationLabel.isHidden = false
-            self.locationLabel.text = "You have been 📍 at this adress : \(placemark.postalAddressFormatted ?? "")"
+    self.locationLabel.isHidden = false
+    self.locationLabel.text = " You have been 📍 at this adress :\n\(placemark.postalAddressFormatted ?? "") "
          
-            ResultViewModel.countryChoosen = placemark.country ?? ""
+        ResultViewModel.countryChoosen = placemark.country ?? ""
       
         }
         

@@ -23,10 +23,18 @@ class HospitalSection: CollectionSection {
         self.headerVM = HospitalHeaderVM(world: "📍🏥 Nearby your position")
 
         self.cellsVM = [CellViewModel]()
-
-        for _ in 0..<4 {
-            let hospitalcellVM = HospitalCellViewModel(hospitalCollection: HospitalCollection, routingEntry: WorldCellEntry())
-        self.cellsVM.append(hospitalcellVM)
-        }
+        if HospitalCollection.results.count == 0 {
+            let empty = EmptyCollectionCellViewModel()
+            cellsVM.append(empty)
+        } else {
+            for hospital in HospitalCollection.results {
+                let hospitalcellVM = HospitalCellViewModel(name: hospital.name, image: URL(string: hospital.icon) , adress: hospital.vicinity, openNow: hospital.openingHours?.openNow ?? false)
+            self.cellsVM.append(hospitalcellVM)
+            }
+            
+       
+          
+        
     }
+}
 }

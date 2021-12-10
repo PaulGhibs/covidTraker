@@ -28,6 +28,7 @@ class WorldSection: CollectionSection {
       
         
         let worldcellVM = WorldCellViewModel(covidCollection: collection)
+        
         self.cellsVM.append(worldcellVM)
         
    

@@ -31,7 +31,3 @@ struct CountryChoosen {
 }
 
 
-struct Coordinates {
-    var latitude: String
-    var longitude: String
-}

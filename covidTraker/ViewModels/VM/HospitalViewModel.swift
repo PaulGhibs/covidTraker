@@ -43,7 +43,7 @@ class HospitalViewModel: ViewModel {
             var tempSections: [Section] = []
             if success, let resource = resource {
                 // parse resourc(e as recipe collection)!
-                
+                print(resource)
                 self.covidTab = resource as! HospitalCollections
                 let currentCollectionSection = HospitalSection(HospitalCollection: self.covidTab)
                 tempSections.append(currentCollectionSection)

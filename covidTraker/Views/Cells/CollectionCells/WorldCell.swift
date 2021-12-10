@@ -13,7 +13,6 @@ class WorldCell: UICollectionViewCell, CLLocationManagerDelegate {
 
     let manager = CLLocationManager()
     
-    var tempsLocations = [Coordinates]()
 
     @IBOutlet weak var wordSituation: UILabel!
     @IBOutlet weak var chartView: UIView!
@@ -54,33 +53,27 @@ class WorldCell: UICollectionViewCell, CLLocationManagerDelegate {
         self.totalDeaths.text = "Total Deaths 🪦 \(dayData.totalDeathsText)"
         self.newCases.text = " New cases 😷 \(dayData.newCasesText)"
         self.updatedAt.text = " Updated at ⏱ : \(dayData.lastUpdate)"
-        
-        
-        
         manager.delegate = self
         manager.requestAlwaysAuthorization()
-        self.saveLocation(manager.location!)
         self.createGraph()
-
 //
+        guard let location = manager.location else {
+            return
+        }
+        self.saveLocation(location)
      }
     
     func saveLocation(_ location: CLLocation) {
         let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let user_lat = String(format: "%f", coordinate.latitude)
-        let user_long = String(format: "%f", coordinate.longitude)
-        let coordinatesSaved = Coordinates.init(latitude: user_lat, longitude: user_long)
-        tempsLocations.append(coordinatesSaved)
-        NotificationCenter.default.post(name: .newCoordinatesPost, object: tempsLocations)
         
+        GoogleMapService.latitude = user_lat
+        UserDefaults.standard.set(user_lat, forKey: "latitude")
+        let user_long = String(format: "%f", coordinate.longitude)        
+        UserDefaults.standard.set(user_long, forKey: "longitude")
+
     }
        
-  
-    
-    
-   
-    
-    
     private func createGraph() {
       
         let headerview = self.chartView
@@ -91,21 +84,17 @@ class WorldCell: UICollectionViewCell, CLLocationManagerDelegate {
         // Chart colors template
         dataSet.colors = ChartColorTemplates.colorful()
         dataSet.mode = .horizontalBezier
-        dataSet.lineWidth = 1
-        dataSet.circleRadius = 4
-        dataSet.setCircleColor(.black)
-    
+        dataSet.lineWidth = 3
+        dataSet.circleRadius = 7
+        dataSet.setCircleColor(.systemRed)
         dataSet.fillAlpha = 1
-       
         let data: LineChartData = LineChartData(dataSet: dataSet)
         // Chart view with a frame
-        
         let chart = LineChartView(frame: CGRect(x: 0, y: 10, width: chartView.frame.size.width, height: chartView.frame.size.width))
         chart.rightAxis.enabled = false
         chart.leftAxis.enabled = false
         chart.data = data
         // subviews
-       
         headerview!.addSubview(chart)
 
     }

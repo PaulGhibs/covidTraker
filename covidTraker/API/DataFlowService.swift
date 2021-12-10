@@ -47,9 +47,6 @@ class DataFlowService : APIService {
     static func createURL(with country: String) throws -> URL? {
        
         let completeURL = "https://covid-19.dataflowkit.com/v1/" + country.replacingOccurrences(of: "United States", with: "USA")
-        
-        
-
         return URL(string: completeURL)
 
     }
