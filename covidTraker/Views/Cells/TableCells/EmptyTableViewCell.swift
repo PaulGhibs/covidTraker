@@ -19,8 +19,8 @@ class EmptyTableViewCell: UITableViewCell {
         // message for nothing found or nothing saved
         
         
-        self.titleLabel.text = NSLocalizedString("No recipes Found", comment: "Go back to search view")
-        self.subtitleLabel.text = NSLocalizedString("No favorites saved yet! 📜 will be display 👇", comment: "If you saved somes recipes")
+        self.titleLabel.text = NSLocalizedString("⚠️ No info Found", comment: "Go back to search view")
+        self.subtitleLabel.text = NSLocalizedString("Check your network and your 📍 🎛 settings", comment: "If you saved somes recipes")
         self.messageImageView.image = UIImage(named: "nothing")
     }
     

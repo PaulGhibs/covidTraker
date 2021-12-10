@@ -9,6 +9,5 @@ target 'covidTraker' do
   pod 'Alamofire', '~> 5.4'
 
   pod 'Charts'
-  pod 'SDWebImage', '~> 5.0'
 
 end

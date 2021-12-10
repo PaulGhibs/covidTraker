@@ -22,15 +22,6 @@ class CountryCellViewModel: TableCellViewModel {
     var nibName: String? = "CountryCell"
     lazy var reuseIdentifier: String = String(describing: self)
     
-
-
-
-    var country : String?
-
-    init(country : String) {
-        self.country = country
-        
-    }
 }
 
 

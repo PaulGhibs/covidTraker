@@ -20,7 +20,6 @@ class HospitalSection: CollectionSection {
         self.position = 0
         self.title = ""
         
-        self.headerVM = HospitalHeaderVM(world: "📍🏥 Nearby your position")
 
         self.cellsVM = [CellViewModel]()
         if HospitalCollection.results.count == 0 {

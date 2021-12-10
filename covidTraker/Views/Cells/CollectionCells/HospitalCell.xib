@@ -17,25 +17,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="304" height="131"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hospital" translatesAutoresizingMaskIntoConstraints="NO" id="hK8-VO-Ar8">
-                        <rect key="frame" x="0.0" y="28" width="67" height="66"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="67" id="M4g-1q-Rk2"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghr-05-Hvx">
-                        <rect key="frame" x="87" y="29" width="217" height="36"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="217" id="I4J-lR-vrf"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghr-05-Hvx">
+                        <rect key="frame" x="0.0" y="29" width="212" height="36.5"/>
                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
                         <color key="textColor" systemColor="secondaryLabelColor"/>
                         <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <size key="shadowOffset" width="1" height="0.0"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33F-p5-sgW">
-                        <rect key="frame" x="87" y="66" width="217" height="28"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33F-p5-sgW">
+                        <rect key="frame" x="2" y="66.5" width="217" height="28"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="217" id="Xnk-BT-CXs"/>
                             <constraint firstAttribute="height" constant="28" id="s8Z-J8-Dzs"/>
@@ -46,19 +37,26 @@
                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <size key="shadowOffset" width="1" height="0.0"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hospital" translatesAutoresizingMaskIntoConstraints="NO" id="hK8-VO-Ar8">
+                        <rect key="frame" x="237" y="27" width="67" height="67"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="uUJ-Pk-gTq"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="Ghr-05-Hvx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="29" id="01w-kJ-gUF"/>
-                <constraint firstItem="33F-p5-sgW" firstAttribute="leading" secondItem="hK8-VO-Ar8" secondAttribute="trailing" constant="20" id="Rfa-Pc-1dU"/>
-                <constraint firstItem="33F-p5-sgW" firstAttribute="centerY" secondItem="hK8-VO-Ar8" secondAttribute="centerY" constant="19" id="Sfy-ux-ISt"/>
-                <constraint firstItem="Ghr-05-Hvx" firstAttribute="leading" secondItem="hK8-VO-Ar8" secondAttribute="trailing" constant="20" id="T7f-2R-X1v"/>
-                <constraint firstItem="Ghr-05-Hvx" firstAttribute="leading" secondItem="hK8-VO-Ar8" secondAttribute="trailing" constant="20" id="Tke-hY-5hY"/>
-                <constraint firstItem="hK8-VO-Ar8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="28" id="qC0-Q7-LCx"/>
+                <constraint firstItem="33F-p5-sgW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="B8R-rm-POS"/>
+                <constraint firstAttribute="trailing" secondItem="hK8-VO-Ar8" secondAttribute="trailing" id="E56-hb-KjN"/>
+                <constraint firstItem="Ghr-05-Hvx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Gyb-0F-AlL"/>
+                <constraint firstItem="33F-p5-sgW" firstAttribute="centerY" secondItem="hK8-VO-Ar8" secondAttribute="centerY" constant="20" id="Sfy-ux-ISt"/>
+                <constraint firstItem="hK8-VO-Ar8" firstAttribute="leading" secondItem="Ghr-05-Hvx" secondAttribute="trailing" constant="25" id="f0x-wp-HIw"/>
+                <constraint firstItem="hK8-VO-Ar8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="27" id="qC0-Q7-LCx"/>
                 <constraint firstItem="33F-p5-sgW" firstAttribute="top" secondItem="Ghr-05-Hvx" secondAttribute="bottom" constant="1" id="ucg-9y-ohy"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hK8-VO-Ar8" secondAttribute="bottom" constant="37" id="v6b-Ew-gmQ"/>
-                <constraint firstItem="hK8-VO-Ar8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yJ4-3F-3hv"/>
+                <constraint firstItem="hK8-VO-Ar8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="237" id="yJ4-3F-3hv"/>
             </constraints>
             <size key="customSize" width="304" height="131"/>
             <connections>

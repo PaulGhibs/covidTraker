@@ -17,8 +17,19 @@ class HospitalCell: UICollectionViewCell {
     @IBOutlet weak var adress: UILabel!
     
     
-    var hospitalCollection: HospitalCollections?
     
+    override func layoutSubviews() {
+      
+        contentView.layer.cornerRadius = 12
+        contentView.layer.borderColor = UIColor.lightGray.cgColor
+        contentView.layer.borderWidth = 1
+        contentView.layer.backgroundColor = UIColor.systemBackground.cgColor
+        contentView.layer.masksToBounds = true
+        contentView.layer.shadowRadius = 3.0
+        contentView.layer.shadowOpacity = 0.3
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowOffset = CGSize(width: 2, height: 2)
+    }
    
     override func configure(cellViewModel: CellViewModel, from controller: UIViewController) {
            guard let cellVM = cellViewModel as? HospitalCellViewModel else {

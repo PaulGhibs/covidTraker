@@ -10,7 +10,7 @@ import Foundation
 
 class HospitalViewModel: ViewModel {
    
-    var titleTabBar = NSLocalizedString("Hospital List", comment: "")
+    var titleTabBar = NSLocalizedString("🏥 Nearby you", comment: "")
 
     var shouldDisplayBackButton = false
     

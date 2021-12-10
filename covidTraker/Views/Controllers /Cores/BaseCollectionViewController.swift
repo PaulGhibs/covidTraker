@@ -48,12 +48,6 @@ class BaseCollectionViewController: UICollectionViewController {
             collectionView.collectionViewLayout = layout.create()
         }
         
-        // Load data and register cells
-        self.viewModel?.loadData { error in
-            self.registerCells()
-            self.collectionView.reloadData()
-            
-        }
     }
    
     

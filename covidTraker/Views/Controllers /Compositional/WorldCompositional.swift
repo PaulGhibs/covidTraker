@@ -41,20 +41,16 @@ struct HospitalCompositional : CompositionalLayoutProtocol {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(100))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 15)
+        item.contentInsets = .init(top: 0, leading: 3, bottom: 0, trailing: 3)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(500))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                                heightDimension: .fractionalHeight(0.05))
+       
         
-        let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
-                                                                        elementKind: UICollectionView.elementKindSectionHeader, alignment: .topLeading)
         
         let section = NSCollectionLayoutSection(group: group)
         
-        section.boundarySupplementaryItems = [headerElement]
 
         
         

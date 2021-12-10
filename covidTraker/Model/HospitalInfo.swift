@@ -13,7 +13,7 @@ import Foundation
 
 // MARK: - HospitalCollections
 struct HospitalCollections: Decodable {
-    let results: [Result]
+    let results: [SearchResult]
     let status: String
 
     enum CodingKeys: String, CodingKey {
@@ -23,7 +23,7 @@ struct HospitalCollections: Decodable {
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct SearchResult: Codable {
     let businessStatus: String
     let geometry: Geometry
     let icon: String

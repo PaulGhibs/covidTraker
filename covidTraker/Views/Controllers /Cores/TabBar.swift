@@ -32,9 +32,9 @@ class TabBarViewController: UITabBarController {
     func setupVCs() {
             viewControllers = [
                 // two controllers the search one and the favorite
-                createNavController(for: BaseCollectionViewController(viewModel: WorldViewModel(apiService: DataFlowService()), compositionalLayout: WorldCompositional()), title: NSLocalizedString("Covid Tracker", comment: ""), image: UIImage(systemName: "homekit")!),
+                createNavController(for: HomeController(viewModel: WorldViewModel(apiService: DataFlowService()), compositionalLayout: WorldCompositional()), title: NSLocalizedString("Covid Tracker", comment: ""), image: UIImage(systemName: "homekit")!),
                 createNavController(for: BasicTableViewController(viewModel: CountryViewModel()), title: NSLocalizedString("Search", comment: ""), image: UIImage(systemName: "magnifyingglass")!),
-                createNavController(for: BaseCollectionViewController(viewModel: HospitalViewModel(apiService: GoogleMapService()), compositionalLayout: HospitalCompositional()), title: NSLocalizedString("Hospitals", comment: ""), image: UIImage(systemName: "stethoscope.circle")!),
+                createNavController(for: HospitalController(viewModel: HospitalViewModel(apiService: GoogleMapService()), compositionalLayout: HospitalCompositional()), title: NSLocalizedString("Hospitals", comment: ""), image: UIImage(systemName: "stethoscope.circle")!),
                 
             ]
         }

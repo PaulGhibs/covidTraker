@@ -66,8 +66,6 @@ class WorldCell: UICollectionViewCell, CLLocationManagerDelegate {
     func saveLocation(_ location: CLLocation) {
         let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let user_lat = String(format: "%f", coordinate.latitude)
-        
-        GoogleMapService.latitude = user_lat
         UserDefaults.standard.set(user_lat, forKey: "latitude")
         let user_long = String(format: "%f", coordinate.longitude)        
         UserDefaults.standard.set(user_long, forKey: "longitude")
@@ -102,6 +100,3 @@ class WorldCell: UICollectionViewCell, CLLocationManagerDelegate {
 
 }
 
-extension Notification.Name {
-    static let newCoordinatesPost = Notification.Name("new_coordinates_post")
-}

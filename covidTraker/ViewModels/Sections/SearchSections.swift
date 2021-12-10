@@ -28,8 +28,8 @@ class SearchSection: TableSection {
         
        
         self.cellsVM = [CellViewModel]()
-    
-        let countrySelected = CountryCellViewModel(country: "spain")
+        
+        let countrySelected = CountryCellViewModel()
         self.cellsVM.append(countrySelected)
        
         let greenButton = ButtonCellViewModel(title: "Get infos 🦠 ", routingEntry: SearchRountingEntry())

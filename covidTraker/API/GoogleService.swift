@@ -75,7 +75,6 @@ class GoogleMapService: APIService {
     static func parse<HospitalCollections: Decodable>(_ data: Data) -> HospitalCollections {
         do {
             let hospital = try JSONDecoder().decode(HospitalCollections.self, from: data)
-            print(hospital)
             return hospital
             
         } catch DecodingError.dataCorrupted(let context) {

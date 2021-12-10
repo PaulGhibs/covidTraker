@@ -27,14 +27,4 @@ enum CovidError: Error, Equatable {
 
 
 
-enum CountryFound {
-    case countryFound
-    case listCountry
-    
-    func successMessage() -> String {
-        switch self {
-        case .countryFound: return NSLocalizedString("CountryFound", comment: "succes")
-        case .listCountry: return NSLocalizedString("here a list of country of found", comment: "error")
-        }
-    }
-}
+

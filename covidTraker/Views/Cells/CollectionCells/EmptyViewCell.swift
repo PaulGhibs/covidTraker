@@ -9,9 +9,17 @@ import UIKit
 
 class EmptyViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var messageImageView: UIImageView!
+    
+    override func configure(cellViewModel : CellViewModel, from controller: UIViewController) {
+        // message for nothing found or nothing saved
+        
+        
+        self.titleLabel.text = NSLocalizedString("⚠️ No info Found", comment: "Go back to search view")
+        self.subtitleLabel.text = NSLocalizedString("Check your network and your 📍 🎛 settings", comment: "")
+        self.messageImageView.image = UIImage(named: "nothing")
     }
-
 }

@@ -26,11 +26,16 @@ class ResultSection: TableSection {
         
        
         self.cellsVM = [CellViewModel]()
-    
+        if covidCollection.countryText == "" {
+            let empty = EmptyTableCellViewModel()
+            cellsVM.append(empty)
+        } else {
+        
         
         let resultSelected = ResultCellViewModel(covidCollection: covidCollection)
         self.cellsVM.append(resultSelected)
        
         
         }
+    }
 }
