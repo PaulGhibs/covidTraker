@@ -14,3 +14,4 @@ And show you a worldwide situation, or each country statistics and evolution of 
 
 
  
+![image](https://user-images.githubusercontent.com/7050604/149133622-4c7425a9-4784-405b-b828-5f2ba909b800.png)
